@@ -101,6 +101,71 @@ main {
     width: 100%;
     height: 85%;
 }
-#content3 h2{
-    
+#content3 h2 {
+    height: 15%;
+    margin: 0;
 }
+
+/* Footer */
+footer {
+    background: #1de9b6;
+    grid-area: footer;
+    font-size: 16px;
+    text-transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Rsponsividade */
+
+@media only screen and (max-width:768px) {
+    header {
+        display: inline-block;
+    }
+    header img{
+        margin: 0;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    nav a {
+        margin: 15px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bolder;
+        color: black;
+    }
+} 
+
+@media only screen and (max-width: 550px) {
+        .container{
+            overflow-y: auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5 fr 0.5fr 1.5fr 1.5fr;
+            grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "content1"
+            "content2"
+            "content3"
+            "footer"
+            ;
+        }
+        #content1 img{
+            width: 100%;
+            height: 90%;
+        }
+        footer{
+            font-size: 16px;
+            text-transform: none;
+            height: 90px;
+        }
+}
+
+
+
